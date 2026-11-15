@@ -1,0 +1,26 @@
+TP SPRING CLOUD - VERSION CORRIGEE
+
+Correction du demarrage : demarrer-tp.bat utilise maintenant la commande Maven globale `mvn` au lieu de `mvnw.cmd`.
+Cela correspond a votre installation puisque les deux premiers modules ont deja compile avec Maven.
+
+Execution :
+1. Ouvrir ce dossier dans Windows.
+2. Verifier `java -version` et `mvn -version` dans CMD.
+3. Double-cliquer sur demarrer-tp.bat.
+
+Ordre : Eureka (8761), SERVICE-CLIENT (8088), SERVICE-VOITURE (8089), Gateway (8888).
+
+Tests :
+- http://localhost:8761
+- http://localhost:8088/clients
+- http://localhost:8088/client/1
+- http://localhost:8089/voitures
+- http://localhost:8089/voitures/1
+- http://localhost:8089/voitures/client/1
+- http://localhost:8888/clients
+- http://localhost:8888/client/1
+- http://localhost:8888/voitures
+- http://localhost:8888/SERVICE-CLIENT/clients
+- http://localhost:8888/SERVICE-VOITURE/voitures
+
+Note : la compilation est faite avec `-DskipTests` comme dans le script initial. Le lancement effectif doit etre confirme sur votre PC.
